@@ -1,0 +1,30 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const { title = 'Hilarious Horizon' } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content="An Astro Content Collections lab site." />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <Header />
+      </div>
+    </header>
+    <main class="container">
+      <slot />
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <Footer />
+      </div>
+    </footer>
+  </body>
+</html>

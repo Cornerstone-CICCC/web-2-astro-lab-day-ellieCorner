@@ -1,11 +1,17 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Home • Hilarious Horizon">
+  <section class="hero card">
+    <h1>Web 2 - Astro Lab Day</h1>
+    <p>This is a lab for exploring Astro</p>
+    <div>
+      <a class="cta" href="/projects">Browse Projects</a>
+      <a class="cta" style="margin-left:.5rem;" href="/blog">Read the Blog</a>
+    </div>
+  </section>
+  <section style="margin-top:1rem;" class="card">
+    <h2>What is this?</h2>
+    <p>This site is for web2 lab <strong>WEB2</strong> using the <code>astro</code></p>
+  </section>
+</BaseLayout>
